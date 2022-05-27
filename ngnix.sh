@@ -1,14 +1,7 @@
-#This installs nginx on Ubuntu22.04
-
-
-
-
-
-
 
 #!/bin/bash
-sudo apt update -y
-sudo apt upgrade -y
-sudo apt-get install -y nginx
-sudo systemctl start nginx
-sudo systemctl enable nginx
+apt update -y
+apt upgrade -y
+apt-get install -y nginx
+systemctl start nginx
+systemctl enable nginx
