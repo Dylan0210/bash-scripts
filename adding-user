@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+#Adding new user with home directory added.
+
+echo "Enter Username: " 
+read uname
+echo "Enter Password: "
+read -s passwd
+egrep "$uname" /etc/passwd > /dev/null
+if [ $? -eq 0 ]; then
+	echo "This username already exists!"
+else
+        sudo useradd -m $uname	
+	echo "$uname has been added and has been given home directory"
+fi
